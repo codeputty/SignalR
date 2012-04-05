@@ -22,6 +22,6 @@ $(function () {
         $('#messages').append('<li style="background-color:' + color + ';color:white">' + value + '</li>');
     }
 
-    $.connection.hub.start({ transport: 'livePolling', xdomain: true });
+    $.connection.hub.start({ transport: 'longPolling', xdomain: true });
 
 });

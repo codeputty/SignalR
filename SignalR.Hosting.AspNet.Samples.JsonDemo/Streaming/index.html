@@ -14,7 +14,7 @@
                 $('#messages').append('<li>' + data + '</li>');
             });
 
-            connection.start({ transport: 'livePolling', xdomain: true });
+            connection.start({ transport: 'longPolling', xdomain: true });
         });
     </script>
 </head>

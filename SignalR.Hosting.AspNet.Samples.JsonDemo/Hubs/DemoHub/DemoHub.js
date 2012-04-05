@@ -29,7 +29,7 @@
         o.doIt();
     };
 
-    $.connection.hub.start({ transport: 'livePolling', xdomain: true }, function () {
+    $.connection.hub.start({ transport: 'longPolling', xdomain: true }, function () {
         demo.doSomethingAndCallError();
 
         demo.getValue(function (value) {

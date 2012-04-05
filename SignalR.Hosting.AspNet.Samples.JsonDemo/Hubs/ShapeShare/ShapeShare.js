@@ -141,7 +141,7 @@ $(function () {
         });
     }
 
-    $.connection.hub.start({ transport: 'livePolling', xdomain: true }, function () {
+    $.connection.hub.start({ transport: 'longPolling', xdomain: true }, function () {
         shapeShare.join($.cookie("userName"), function () {
             $.cookie("userName", shapeShare.user.Name, { expires: 30 });
             $("#user").val(shapeShare.user.Name);

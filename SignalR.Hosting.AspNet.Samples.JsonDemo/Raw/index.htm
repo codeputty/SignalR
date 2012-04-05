@@ -49,7 +49,7 @@
 
 
             var start = function () {
-                connection.start({ transport: 'livePolling', xdomain: true })
+                connection.start({ transport: 'longPolling', xdomain: true })
                     .then(function () {
                         $("#stopStart").prop("disabled", false);
                     });

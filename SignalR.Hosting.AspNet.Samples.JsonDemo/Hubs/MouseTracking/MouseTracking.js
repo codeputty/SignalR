@@ -24,7 +24,7 @@
     }
 
 
-    signalR.hub.start({ transport: 'livePolling', xdomain: true }, function () {
+    signalR.hub.start({ transport: 'longPolling', xdomain: true }, function () {
         signalR.mouseTracking.join(function () {
 
             $(document).mousemove(function (e) {
