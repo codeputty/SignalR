@@ -1,8 +1,9 @@
 ﻿$(function () {
-    $.connection.hub.url = "http://localhost:40476/signalr";
     var demo = $.connection.demo,
         groupAddedCalled = false;
-
+    
+    $.connection.hub.url = "http://localhost:40476/signalr";
+    
     demo.invoke = function (index) {
         $('#msg').append('<li>' + index + ' client state index ->' + this.index + '</li>');
     };
@@ -28,7 +29,7 @@
         o.doIt();
     };
 
-    $.connection.hub.start({ transport: 'longPolling', xdomain:true }, function () {
+    $.connection.hub.start({ transport: 'livePolling', xdomain: true }, function () {
         demo.doSomethingAndCallError();
 
         demo.getValue(function (value) {
